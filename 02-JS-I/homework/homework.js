@@ -237,9 +237,7 @@ function esVocal(letra){
   if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
     return 'Es vocal';
   }
-  if (letra === 'A' || letra === 'E' || letra === 'I' || letra === 'O' || letra === 'U') {
-    return 'Es vocal';
-  } 
+  
 }
 
 
