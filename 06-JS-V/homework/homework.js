@@ -8,17 +8,17 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function usuario(opciones) {
+  function Usuario(opciones) {
       this.usuario = opciones.usuario;
       this.nombre = opciones.nombre;
       this.email = opciones.email;
       this.password = opciones.password;
     }
-      usuario.prototype.saludar = function() {
+      Usuario.prototype.saludar = function() {
       return 'Hola, mi nombre es ' + this.nombre
   };
   
-  return usuario;
+  return Usuario;
 }
 
 function agregarMetodoPrototype(Constructor) {
@@ -37,13 +37,14 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
   String.prototype.reverse = function() {
-    var strInvertida = '';
-    for (var i = this.length - 1; i >= 0; i--) {
-      strInvertida = strInvertida + this.charAt(i);
+    var arr = this.split('');
+    var arr2 = []
+    for (var i = arr.length - 1; i >= 0; i--) {
+      arr2.push(arr[i]);
     }
-    return strInvertida;
-  } 
+    return arr2.join('')
   
+}
 }
 
 // ---------------------------------------------------------------------------//
